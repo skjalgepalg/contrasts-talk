@@ -22,7 +22,17 @@ import slides, { notes } from './slides.mdx';
 
 
 // SPECTACLE_CLI_THEME_START
-const theme = {};
+const theme = {
+  colors: {
+    // primary: '#78003d', // Warm Pink 800
+    // secondary: '#009de7', // Alt Blue 500
+    // backgroundColor: 'hotpink'
+  },
+  fonts: {
+    header: 'NRK Sans',
+    text: 'NRK Sans'
+  }
+};
 // SPECTACLE_CLI_THEME_END
 
 // SPECTACLE_CLI_TEMPLATE_START
@@ -50,6 +60,7 @@ const Presentation = () => (
         .map((MDXSlide, i) => [MDXSlide, notes[i]])
         .map(([MDXSlide, MDXNote], i) => (
           <Slide key={`slide-${i}`} slideNum={i}>
+          {/* <Slide key={`slide-${i}`} slideNum={i} backgroundColor='backgroundColor'> */}
             <MDXSlide />
             <Notes>
               <MDXNote />
