@@ -1,53 +1,315 @@
 # Capracon 2022
 
-## Hvordan fungerer egentlig en kontrast
+> Kontrast betyr utpreget motsetning, motstykke eller det som skiller seg sterkt fra.
 
-Notes: Dette er noe jeg har lurt mye på
- * snerk
- * snerk
+<sub>Kontrast i Store norske leksikon på snl.no. Hentet 21. april 2022 fra https://snl.no/kontrast</sub>
+
+Notes: ETYMOLOGI fra fransk - italiensk, av kontra- og latin 'stå'
+
+---
+
+# Hvordan fungerer egentlig en kontrast
+
+NB! - Fare for fremmedord!
+
+- Skrik ut
+- Spør etterpå
+- Ro ned lommegooglingen
+
+Notes: Tema har jeg lurt mye på
+
+- Assosiasjon med Tilgjengelighet
+- Ramler ned et kaninhull
+
 ---
 
 # Kort om lille meg
-
-
-<img style={{ height: '100px', width: '100px', borderRadius: '50%'}} alt='Bilde av Skjalg' src='https://cdn.sanity.io/images/qjxmaf64/production/1381c995c1cda1ab71fcb220339e6e4bd4acc177-1816x1674.jpg?w=400&fit=crop'></img>
 
 **Skjalg Erling Schrødter Teig**
 
 - Frontendutvikler på designutvikling i Norsk rikskringkasting (NRK)
 
- - Core Components og kode på tvers
+- Core Components og kode på tvers
 
-Notes: Hvorfor prater jeg om dette?
+Notes: Hvem er jeg
+
+- Hvor jobber jeg
+- Hva jobber jeg med til daglig
+- Hvorfor er jeg her
+- Hvorfor prater jeg om dette
 
 ---
 
 # Agenda er kult
 
 - Kontekst
-  - Fugleperspektiv: Verdensveven -> Skjermer -> Brukeropplevelse -> Tilgjengelighet/a11y -> UU -> WCAG
-  - Ordbok? -Skrik ut!
-- Hvordan type kontrast snakker vi om her, sånn egentlig
-  - Fremmedordet
-  - Belysning
-  - Fototeknikk
-  - Universell utforming
-- Hva er en kontrast?
-- Hvordan fungerer en kontrast på Oss (Øyet)
-  - [Shinobu Ishihara](https://en.wikipedia.org/wiki/Shinobu_Ishihara)
-  - Skjermer
-  - 
-
-- Lære mer
-  - Whocanuse.com
-- Kilder og mersmak
+- Hva er en kontrast
+- WCAG 2.0
+- Beregningsmetode
+- Dagens løsning, et problem?
+- WCAG 3.0 og veien dit
 - Spørsmål
+
+Notes: Agenda er viktig
+
+- Vi starter med litt Kontekst og avgrensing
+- Definisjon og hvordan det fungerer
+- Så hvorfor dette er relevant
+- To typer beregning
+- Svakheter ved dagens løsning
+- Ser på en foreslått løsning i utkastet til WCAG 3.0
+- Spørsmål om vi har tid
+
 ---
-![ishiharatest](https://upload.wikimedia.org/wikipedia/commons/c/c7/Ishihara-12.gif)
+
+# Kontekst
+
+- Fugleperspektiv
+  - Verdensveven
+  - Brukeropplevelse
+  - Tilgjengelighet
+
+Notes: Kontekst
+
+- Fremmedordsdefinisjonen dekker ikke web
+- Brukere og skjermer -> Brukeropplevelse
+- Tilgjengelighet -> Universell utforming -> WCAG
+
+---
+
+# Kort om farge og skjermer
+
+- Øyet
+- Skjermer
+- Fremstille en farge på web RGB()
+- HSL (Hue saturation lightness)
+
+Notes: Kort om farge
+
+- Retina -> kjegler sort/hvit, staver RGB -> Trikromatisk
+- Rød 564 nm (L - long)
+- Grønn 534 nm (M - medium)
+- Blå 420 nm (S - short)
+- fargeblindhet bundet til x-kromosomet -Blindeforbundet
+  - ~0.3% for kvinner (XX)
+  - 5-8% menn (XY)
+  - CSS - Rød på sort anbefales ikke
+- Skjermer sRGB HP og Microsoft for web på 90-tallet
+
+---
+
+# Kort om farge og skjermer
+
+<div style={{ alignSelf: 'center' }}>
+  <img
+    style={{ height: '300px', width: '300px', borderRadius: '50%' }}
+    alt='Simulert Ishiharatest'
+    src='https://upload.wikimedia.org/wikipedia/commons/c/c7/Ishihara-12.gif'
+  ></img>
+  <img
+    style={{ height: '300px', width: '300px', borderRadius: '50%' }}
+    alt='Ishiharatest fra wikipedia'
+    src='https://upload.wikimedia.org/wikipedia/commons/a/ae/Ishihara_19.PNG'
+  ></img>
+</div>
+
+Notes: [Ishihara test](https://en.wikipedia.org/wiki/Ishihara_test)
+
+- HVIS VI HAR TID!
+- Shinobu Ishihara
+
+---
+
+# Hva er en kontrast? Sånn egentlig
+
+- Relativ luminans
+  - Lysstyrke som en lyskilde utsender pr. flateenhet
+  - Målt i candela pr. m²
+
+Notes: kontrast
+
+- Kontrast, luminanskontrast, oppstår når det er stor forskjell i lystetthet mellom to eller flere inntil hverandre liggende flater.
+- Merk "relativ luminans" for å unngå å hentyde at verdensveven avgir lys
+
+---
+
+# Hva sier WCAG 2.0
+
+- Prinsipp 1: Mulig å oppfatte
+
+  - Retningslinje 1.4: Mulig å skille fra hverandre
+
+    - Suksesskriterie 1.4.3: Kontrast (Minimum)
+
+    - Suksesskriterie 1.4.6 Kontrast (forbedret)
+
+Notes: wcag 2
+
+- 1.4.3 Kontrastforholdet mellom teksten og bakgrunnen er minst 4,5:1. 3,0:1 for stor eller fet tekst 18 pt (24 px) eller 14 pt (19 px) og bold
+- Nivå AA
+- 1.4.6 Ikke omfattet av forskriften, kontrast 7:1
+- Nivå AAA
+
+---
+
+# Hva sier WCAG 2.0
+
+- Utgangspunkt i ISO-9241-3 - 3:1
+  - WCAG la inn slingringsmonn (til 4,5:1) for kontrasttap
+    - 20/40 kontrastsensitivitetstap på ~1.5 gang `(3\*1.5):1`
+    - For 20/80 utledet 7:1
+
+Notes: wcag utgangspunkt
+
+- ISO - Ergonomic requirements for office work with visual display terminals (VDTs)
+- Omdøpt 2006 Ergonomics of Human System Interaction. Del 3 omhandler visual display requirements
+- kontrasttap lav evne til å oppfatte kontraster, fargeblindhet samt gradvis tap grunnet alder
+- 20/40 synsskarphet medfører kontrastsensitivitetstap på ~1.5 (3\*1.5):1
+- For 20/80 synsskarphet ble det ekstrapolert til 7:1 (for AAA)
+- IEC - International Electrotechnical Commission
+
+---
+
+# Beregningsmetode
+
+- Formel for beregning av kontrast:
+  - `(L1 + 0.05)/(L2 + 0.05)`
+  - Finn luminansverdi (L1, L2) for fargene
+  - Divider de to verdiene med buffer
+
+Notes: Beregning 1
+
+- 0.05 legges til som buffer, uten veldig god forklaring
+- gir et forholdstall mellom 21:1 og 1:1
+
+---
+
+# Beregningsmetode (WCAG 2.0)
+
+- Relativ luminans
+  - `L = 0.2126 * R + 0.7152 * G + 0.0722 * B`
+  - `rgb(200,0,0)` => `RsRGB = sR/255` => `0.7843137255`
+  - `rgb(0,200,0)` => `GsRGB = sG/255` => `0.7843137255`
+  - `rgb(0,0,200)` => `BsRGB = sB/255` => `0.7843137255`
+
+Notes: wcag beregning
+
+- Huske å konvertere til desimaltall
+
+---
+
+# Beregningsmetode (WCAG 2.0)
+
+- Relativ luminans
+  - `if RsRGB <= 0.04045 then R = RsRGB/12.92 else R = ((RsRGB+0.055)/1.055) ^ 2.4`
+  - `if GsRGB <= 0.04045 then G = GsRGB/12.92 else G = ((GsRGB+0.055)/1.055) ^ 2.4`
+  - `if BsRGB <= 0.04045 then B = BsRGB/12.92 else B = ((BsRGB+0.055)/1.055) ^ 2.4`
+
+Notes: wcag beregning
+
+- Formelen er basert på IEC-4WD
+- IEC - International Electrotechnical Commission
+
+---
+
+# Beregningsmetode (WCAG 2.0)
+
+- Relativ luminans
+  - `R = ((0.7843137255+0.055)/1.055)^2.4` => `0.5775804404*0.2126` => `0.1227936016`
+  - `G = ((0.7843137255+0.055)/1.055)^2.4` => `0.5775804404*0.7152` => `0.413085531`
+  - `B = ((0.7843137255+0.055)/1.055)^2.4` => `0.5775804404*0.0722` => `0.0417013078`
+
+Notes: wcag beregning
+
+- Formelen er basert på IEC-4WD
+
+---
+
+# Beregningsmetode (WCAG 2.0)
+
+- Relativ luminans
+  - `L1 > L2 ? (L1 + 0.05) / (L2 + 0.05) : (L2 + 0.05) / (L1 + 0.05)`
+  - G:R
+  - `(0.413085531+0.05) / (0.1227936016+0.05)` => `2.6799923534` => `2.68:1`
+
+Notes: wcag beregning
+
+- Alltid Lysest over mørkest
+
+---
+
+# Dagens løsning, et problem?
+
+- Basert på etterhvert gammel spec
+- Fortsatt veldig nyttige for veldig mye
+- Kontrast er observert, subjektivt
+- Standarder endres sakte
+
+Notes: problem?
+
+- Kjip designconstraint
+
+---
+
+# APCA
+
+- [Advanced Perceptual Contrast Algorithm](https://www.myndex.com/APCA/)
+  - Public beta `npm i apca-w3`
+  - Foreslått som forbedret algoritme til WCAG
+  - Lc 0 til Lc 106 mørk tekst på lys bakgrunn
+  - Lc 0 til Lc -108 lys tekst på mørk bakgrunn
+
+---
+
+# APCA
+
+- [Advanced Perceptual Contrast Algorithm](https://www.myndex.com/APCA/)
+  - 15 - Minimum for ikke-tekst
+  - 30 - Absolutt minimum for tekst
+  - 45 - Minimum for stor tekst (WCAG 3:1)
+  - 60 - Minimum for tekst (WCAG 4.5:1)
+  - 75 - Minimum for brødtekst
+  - 90 - Foretrukket for brødtekst
+
+Notes: APCA
+
+- WCAG AA -> AAA
+- Øk Lc med 15
+
+---
+
+# WCAG 3.0 og veien dit
+
+- Public draft
+- Spesifikasjon om noen år
+- Lettere å forstå
+- Behandlingstid til og i Norge
+
+Notes: WCAG 3
+
+- W3C Accessibility Guidelines
+- implementering av WAD gikk greit over tiden.
+
+---
+
+# Spørsmål?
+
+- Slides laget med Spectacle -> github
+- [Whocanuse.com]
+- [wcag#695](https://github.com/w3c/wcag/issues/695)
+- [Andrew Somers - whats-red-black-also-not-read](https://atangledwebweweave.com/whats-red-black-also-not-read-573b9c0a97ed)
+- [Andrew Somers - A contrast of errors](https://atangledwebweweave.com/a-contrast-of-errors-373c2665d42a)
 
 ---
 
 # Kilder
- - Store norske leksikon: [Kontrast](https://snl.no/kontrast), [Kontrast (belysning)](https://snl.no/kontrast_-_belysning), [Kontrast (fototeknikk)](https://snl.no/kontrast_-_forskjell)
+
+- Store norske leksikon
+- Rosvold, Knut A.: kontrast - belysning i Store norske leksikon på snl.no. Hentet 20. april 2022 fra https://snl.no/kontrast_-_belysning
+- Blindeforbundet.no
+- [Pantone.com](https://www.pantone.com/articles/color-fundamentals/how-do-we-see-color)
+- Wikipedia - [Ishihara test](https://en.wikipedia.org/wiki/Ishihara_test)
 
 ---
+
+Takk for meg
